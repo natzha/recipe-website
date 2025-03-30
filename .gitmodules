@@ -1,0 +1,3 @@
+[submodule "submodule/Recipes"]
+	path = submodule/Recipes
+	url = https://github.com/caryguan/Recipes.git
