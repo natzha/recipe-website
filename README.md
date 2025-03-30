@@ -12,9 +12,13 @@ npm install
 ```
 
 ```
-npm start
+npm run dev
 ```
 
 
 # Notes / Todos
 * verify whether we need the marked.min.js file or not
+
+* might need to rework with express for access to local data
+    * what if data was not local? maybe ping the github page and get the file names
+    * would we need github api?
