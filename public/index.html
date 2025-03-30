@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Markdown Recipes</title>
+    <link rel="stylesheet" type="text/css" href="css/github-markdown-light.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="js/marked.min.js"></script>
+    <script type="text/javascript" src="js/purify.min.js"></script>
+
+    <script type="module"  src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="content"></div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <script>
+        document.getElementById('content').innerHTML =
+            marked.parse('# Marked in the browser\n\nRendered by **marked**.');
+    </script>
+
+    <div id="container">
+        <h1> change</h1>
+        <div id="files" class="column">
+            <div id="editor-wrapper">
+                <div id="editor"></div>
+            </div>
+        </div>
+        <div id="core-recipe" class="column">
+            <div id="preview-wrapper">
+                <div id="output" class="content markdown-body"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
