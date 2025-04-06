@@ -1,95 +1,100 @@
 // this file requires marked and dompurity
 
+async function loadRecipeTree(recipesDir) {
 
-/********************
-******* TEST ********
-********************/
-document.addEventListener("DOMContentLoaded", () => {
+    let recipeTree;
 
-    // default template
-    const defaultInput = `
-# Markdown syntax guide
+    try {
+        const response = await fetch(recipesDir);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        recipeTree = data;
 
-## Headers
+    } catch (error) {
+        console.error('Error reading JSON file:', error);
+    }
 
-# This is a Heading h1
-## This is a Heading h2
-###### This is a Heading h6
+    toc = document.getElementById("toc");
 
-## Emphasis
-
-*This text will be italic*  
-_This will also be italic_
-
-**This text will be bold**  
-__This will also be bold__
-
-_You **can** combine them_
-
-## Lists
-
-### Unordered
-
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-    * Item 3a
-    * Item 3b
-
-### Ordered
-
-1. Item 1
-2. Item 2
-3. Item 3
-    1. Item 3a
-    2. Item 3b
-
-## Images
-
-![This is an alt text.](/image/sample.webp "This is a sample image.")
-
-## Links
-
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
-
-## Blockquotes
-
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
->
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
-
-## Tables
-
-| Left columns  | Right columns |
-| ------------- |:-------------:|
-| left foo      | right foo     |
-| left bar      | right bar     |
-| left baz      | right baz     |
-
-## Blocks of code
-
-${"`"}${"`"}${"`"}
-let message = 'Hello world';
-alert(message);
-${"`"}${"`"}${"`"}
-
-## Inline code
-
-This web site is using ${"`"}markedjs/marked${"`"}.
-`;
+    // Create table of contents
+    const groupedData = recipeTree.reduce((groups, item) => {
+        if (!(item.group == "recipes")) {
+            if (!groups[item.group]) {
+                groups[item.group] = [];
+            }
+            groups[item.group].push(item);
+        }
+        return groups;
+    }, {});
 
 
-    // Render markdown text as html
-    let convert = (markdown) => {
-        let options = {
-            headerIds: false,
-            mangle: false
-        };
-        let html = marked.parse(markdown, options);
-        let sanitized = DOMPurify.sanitize(html);
-        document.querySelector('#output').innerHTML = sanitized;
+    for (const [group, items] of Object.entries(groupedData)) {
+
+
+        const groupDiv = document.createElement('div');
+        groupDiv.classList.add("group");
+        groupDiv.textContent = group;
+        toc.appendChild(groupDiv);
+
+        const itemList = document.createElement('ul');
+        items.forEach(recipe => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('item');
+            
+            const link = document.createElement('a');
+            link.href = recipe.relative_path;
+            link.textContent = recipe.title;
+            
+            listItem.appendChild(link);
+            itemList.appendChild(listItem);
+        });
+        toc.appendChild(itemList);
+
     };
 
-    convert(defaultInput)
-});
+}
+
+
+
+function loadHTML(filePath) {
+    fetch(filePath)
+        .then(response => response.text()) // Read the HTML file content as text
+        .then(htmlContent => {
+            document.querySelector('#output').innerHTML = htmlContent; // Insert content into the element
+        })
+        .catch(error => {
+            console.error('Error loading the HTML file:', error);
+        });
+};
+
+
+function clickOrigin(e){
+    var target = e.target;
+    var tag = [];
+    tag.tagType = target.tagName.toLowerCase();
+    tag.tagClass = target.className.split(' ');
+    tag.id = target.id;
+    tag.parent = target.parentNode;
+
+    return tag;
+}
+
+
+document.body.onclick = function(e){
+    var elem = clickOrigin(e);
+
+    var tagsToIdentify = ['img','a'];
+
+    for (var tags=0; tags < tagsToIdentify.length; tags++){
+        if (elem.tagType == tagsToIdentify[tags]){
+            loadHTML(e.target);
+            return false; // or do something else.
+        }
+    }
+};
+
+const recipesDir = 'recipes/html_files_info.json'
+document.addEventListener("DOMContentLoaded", () => loadRecipeTree(recipesDir));
+// document.addEventListener("DOMContentLoaded", () => loadHTML(filePath));
