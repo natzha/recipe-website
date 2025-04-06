@@ -1,5 +1,7 @@
 .PHONY: setup
 setup:
+	rm -rf submodule/Recipes
+	rm -rf public/recipes
 	npm install
 	git submodule update --init --recursive
 
@@ -13,14 +15,6 @@ clean:
 pull: 
 	git submodule update --init --recursive
 
-# .PHONY: build
-# build:
-# 	npm run build
-
-# .PHONY: preview
-# preview:
-# 	npm run preview
-
 .PHONY: convert
 convert: 
 	node convert.js
@@ -33,6 +27,15 @@ dev:
 deploy:
 	rm -rf submodule/Recipes
 	rm -rf public/recipes
+	npm install
 	git submodule update --init --recursive
 	node convert.js
-# npm run dev
+# # npm run build
+# 	git checkout gh-pages
+# 	git pull origin gh-pages
+# 	rm -rf *  # Remove old content
+# 	cp -r dist/* .  # Copy new build files
+# 	git add -A
+# 	git commit -m "Deploy to GitHub Pages"
+# 	git push origin gh-pages
+# 	git checkout main  # Go back to the main branch
