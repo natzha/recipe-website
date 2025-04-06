@@ -29,12 +29,11 @@ const getMarkdownFiles = (inputDir, outputDir) => {
         if (fileInfo && fileInfo.isDirectory()) {
             // create a directory in output
             const formattedOutputPath = outputPath.replace(/\s/g, '_');
-
             if (!fs.existsSync(formattedOutputPath)) {
-
                 fs.mkdirSync(formattedOutputPath, {recursive: true});
             }
 
+            // recurse directory and record outputs
             let filesArrayRet, htmlFilesInfoRet = getMarkdownFiles(filePath, outputPath);
             filesArray = filesArray.concat(filesArrayRet);
             htmlFilesInfo = htmlFilesInfo.concat(htmlFilesInfoRet);
@@ -42,7 +41,6 @@ const getMarkdownFiles = (inputDir, outputDir) => {
         } else if (filePath.endsWith(".md")) {
             const outputFilepath = path.join(outputDir, path.basename(filePath, ".md") + ".html");
             filesArray.push(filePath);
-
 
             formattedOutputFilePath = outputFilepath.replace(/\s/g, '_');
             let relative_path;
@@ -84,35 +82,14 @@ const convertMarkdown2Html = (filepath) => {
     return sanitized;
 }
 
-const saveToJson = () => {
+const convert = () => {
     const inputDir = "submodules/Recipes";
     const outputDir = "public/recipes/";
     let files, htmlFilePaths = getMarkdownFiles(inputDir, outputDir)
+
+    // save data into json
     const jsonOutputPath = path.join(outputDir, 'html_files_info.json');
     fs.writeFileSync(jsonOutputPath, JSON.stringify(htmlFilePaths, null, 4));
 }
 
-const readJson = () => {
-
-    const jsonData = fs.readFileSync("public/recipes/html_files_info.json");
-    const obj = JSON.parse(jsonData);
-    console.log("obj: ", obj);
-
-
-    // fetch("recipes/html_files_info.json")
-    //     .then((obj) => res.text())
-    //     .then((text) => {
-    //         // do something with "text"
-    //         console.log("print: ", obj);
-    //     })
-    //     .catch((e) => console.error(e));
-}
-
-
-saveToJson();
-readJson();
-
-
-
-
-
+convert();
