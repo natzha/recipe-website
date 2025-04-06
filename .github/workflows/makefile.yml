@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run make
-      run: make deploy
+      run: make
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
