@@ -4,14 +4,15 @@
   "description": "",
   "scripts": {
     "dev": "lite-server",
-    "build": "node convert.js && parcel build public/index.html --public-url /recipe-website/"
+    "build": "node convert.js && parcel build public/index.html public/recipes/*.js public/recipes/*/*.html --public-url /recipe-website/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dompurify": "^3.2.5",
     "jsdom": "^26.0.0",
-    "marked": "^15.0.7"
+    "marked": "^15.0.7",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "lite-server": "^2.6.1",

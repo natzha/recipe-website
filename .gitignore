@@ -1,3 +1,4 @@
 node_modules/
+public/recipes/
 dist/
 .parcel-cache/

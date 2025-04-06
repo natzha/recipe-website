@@ -5,7 +5,7 @@ async function loadRecipeTree(recipesDir) {
     try {
         const response = await fetch(recipesDir);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response was not ok!');
         }
         recipeTree = await response.json();
     } catch (error) {
@@ -81,7 +81,7 @@ function displayToc() {
     }
 }
 
-const recipesDir = 'recipes/html_files_info.json'
+const recipesDir = 'recipes/html_files_info.js'
 document.addEventListener("DOMContentLoaded", () => loadRecipeTree(recipesDir));
 
 document.getElementById('burger-menu').addEventListener('click', () => displayToc());

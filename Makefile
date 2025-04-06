@@ -27,15 +27,13 @@ build:
 	npm run build
 
 
-clean:
+test:
 	rm -rf submodule/Recipes
 	rm -rf public/recipes
-
-pull: 
+	npm install
 	git submodule update --init --recursive
-
-convert: 
-	node convert.js
+	npm run build
+	serve dist
 
 dev:
 	npm install
