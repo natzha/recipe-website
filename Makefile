@@ -6,8 +6,11 @@ deploy:
 	git submodule update --init --recursive
 	npm run build
 	git checkout gh-pages
+	rm -rf .dist/
+	mv dist/ .dist/
 	git pull origin gh-pages
-	cp -r dist/* .  # Copy new build files
+	rm -rf *
+	cp -r .dist/* .  # Copy new build files
 	git add -A
 	git commit -m "Deploy to GitHub Pages"
 	git push origin gh-pages
@@ -35,4 +38,9 @@ convert:
 	node convert.js
 
 dev:
+	rm -rf submodule/Recipes
+	rm -rf public/recipes
+	npm install
+	git submodule update --init --recursive
+	node convert.js
 	npm run dev
