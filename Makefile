@@ -38,8 +38,6 @@ convert:
 	node convert.js
 
 dev:
-	rm -rf submodule/Recipes
-	rm -rf public/recipes
 	npm install
 	git submodule update --init --recursive
 	node convert.js

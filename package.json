@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "lite-server",
-    "build": "node convert.js && parcel build public/index.html"
+    "build": "node convert.js && parcel build public/index.html --public-url /recipe-website/"
   },
   "author": "",
   "license": "ISC",
