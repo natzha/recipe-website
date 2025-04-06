@@ -14,23 +14,14 @@
 </head>
 
 <body>
-    <div id="content"></div>
-    <script>
-        document.getElementById('content').innerHTML =
-            marked.parse('# Marked in the browser\n\nRendered by **marked**.');
-    </script>
 
+    <div id="burger-menu">&#9776;</div> <!-- The burger menu icon -->
     <div id="container">
-        <h1> change</h1>
         <div id="files" class="column">
-            <div id="editor-wrapper">
-                <div id="editor"></div>
-            </div>
+            <div id="toc"></div>
         </div>
         <div id="core-recipe" class="column">
-            <div id="preview-wrapper">
-                <div id="output" class="content markdown-body"></div>
-            </div>
+            <div id="output" class="content markdown-body"></div>
         </div>
     </div>
 
