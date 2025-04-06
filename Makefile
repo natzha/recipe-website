@@ -7,7 +7,6 @@ deploy:
 	npm run build
 	git checkout gh-pages
 	git pull origin gh-pages
-	rm -rf *  # Remove old content
 	cp -r dist/* .  # Copy new build files
 	git add -A
 	git commit -m "Deploy to GitHub Pages"
@@ -16,11 +15,14 @@ deploy:
 
 .PHONY: deploy
 
-setup:
+.PHONY: build
+build:
 	rm -rf submodule/Recipes
 	rm -rf public/recipes
 	npm install
 	git submodule update --init --recursive
+	npm run build
+
 
 clean:
 	rm -rf submodule/Recipes
