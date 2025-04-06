@@ -1,6 +1,8 @@
 .PHONY: setup
 setup:
 	npm install
+	git submodule update --init --recursive
+
 
 .PHONY: clean
 clean:
