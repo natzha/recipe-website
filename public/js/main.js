@@ -81,7 +81,7 @@ function displayToc() {
     }
 }
 
-const recipesDir = 'recipes/html_files_info.json'
+const recipesDir = 'html_files_info.json'
 document.addEventListener("DOMContentLoaded", () => loadRecipeTree(recipesDir));
 
 document.getElementById('burger-menu').addEventListener('click', () => displayToc());

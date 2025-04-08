@@ -2,6 +2,7 @@
 deploy:
 	rm -rf submodule/Recipes
 	rm -rf public/recipes
+	rm -rf dist/
 	npm install
 	git submodule update --init --recursive
 	npm run build
@@ -30,6 +31,7 @@ build:
 test:
 	rm -rf submodule/Recipes
 	rm -rf public/recipes
+	rm -rf dist
 	npm install
 	git submodule update --init --recursive
 	npm run build

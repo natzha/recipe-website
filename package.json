@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "http-server",
-    "build": "node convert.js && parcel build public/index.html public/recipes/*.json public/recipes/*/*.html --public-url /recipes/"
+    "build": "node convert.js && parcel build public/index.html public/recipes/*.json public/recipes/*/*.html --public-url /recipes/ && mv dist/recipes/* dist/ && rm -rf dist/recipes/"
   },
   "author": "",
   "license": "ISC",
