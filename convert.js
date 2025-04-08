@@ -88,7 +88,7 @@ const convert = () => {
     let files, htmlFilePaths = getMarkdownFiles(inputDir, outputDir)
 
     // save data into json
-    const jsonOutputPath = path.join(outputDir, 'html_files_info.js');
+    const jsonOutputPath = path.join(outputDir, 'html_files_info.json');
     fs.writeFileSync(jsonOutputPath, JSON.stringify(htmlFilePaths, null, 4));
 }
 
