@@ -5,7 +5,7 @@
         "page": "Banana_Bread.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Banana_Bread.html",
-        "relative_path": "/recipes/Baking/Banana_Bread.html"
+        "relative_path": "Banana_Bread"
     },
     {
         "title": "Basic Sponge",
@@ -13,7 +13,7 @@
         "page": "Basic_Sponge.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Basic_Sponge.html",
-        "relative_path": "/recipes/Baking/Basic_Sponge.html"
+        "relative_path": "Basic_Sponge"
     },
     {
         "title": "Brown Butter Cookies",
@@ -21,7 +21,7 @@
         "page": "Brown_Butter_Cookies.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Brown_Butter_Cookies.html",
-        "relative_path": "/recipes/Baking/Brown_Butter_Cookies.html"
+        "relative_path": "Brown_Butter_Cookies"
     },
     {
         "title": "Croissants",
@@ -29,7 +29,7 @@
         "page": "Croissants.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Croissants.html",
-        "relative_path": "/recipes/Baking/Croissants.html"
+        "relative_path": "Croissants"
     },
     {
         "title": "Matcha Mochi Cookies",
@@ -37,7 +37,7 @@
         "page": "Matcha_Mochi_Cookies.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Matcha_Mochi_Cookies.html",
-        "relative_path": "/recipes/Baking/Matcha_Mochi_Cookies.html"
+        "relative_path": "Matcha_Mochi_Cookies"
     },
     {
         "title": "Sourdough Bread",
@@ -45,7 +45,7 @@
         "page": "Sourdough_Bread.html",
         "directory": "public/recipes/Baking",
         "path": "public/recipes/Baking/Sourdough_Bread.html",
-        "relative_path": "/recipes/Baking/Sourdough_Bread.html"
+        "relative_path": "Sourdough_Bread"
     },
     {
         "title": "Pancakes",
@@ -53,7 +53,7 @@
         "page": "Pancakes.html",
         "directory": "public/recipes/Breakfast",
         "path": "public/recipes/Breakfast/Pancakes.html",
-        "relative_path": "/recipes/Breakfast/Pancakes.html"
+        "relative_path": "Pancakes"
     },
     {
         "title": "Protein Oats",
@@ -61,7 +61,7 @@
         "page": "Protein_Oats.html",
         "directory": "public/recipes/Breakfast",
         "path": "public/recipes/Breakfast/Protein_Oats.html",
-        "relative_path": "/recipes/Breakfast/Protein_Oats.html"
+        "relative_path": "Protein_Oats"
     },
     {
         "title": "Matcha Mochi",
@@ -69,7 +69,7 @@
         "page": "Matcha_Mochi.html",
         "directory": "public/recipes/Desserts",
         "path": "public/recipes/Desserts/Matcha_Mochi.html",
-        "relative_path": "/recipes/Desserts/Matcha_Mochi.html"
+        "relative_path": "Matcha_Mochi"
     },
     {
         "title": "Purin",
@@ -77,7 +77,7 @@
         "page": "Purin.html",
         "directory": "public/recipes/Desserts",
         "path": "public/recipes/Desserts/Purin.html",
-        "relative_path": "/recipes/Desserts/Purin.html"
+        "relative_path": "Purin"
     },
     {
         "title": "Chicken Karaage",
@@ -85,7 +85,7 @@
         "page": "Chicken_Karaage.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Chicken_Karaage.html",
-        "relative_path": "/recipes/Dinner/Chicken_Karaage.html"
+        "relative_path": "Chicken_Karaage"
     },
     {
         "title": "Egg and Chive Pockets",
@@ -93,7 +93,7 @@
         "page": "Egg_and_Chive_Pockets.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Egg_and_Chive_Pockets.html",
-        "relative_path": "/recipes/Dinner/Egg_and_Chive_Pockets.html"
+        "relative_path": "Egg_and_Chive_Pockets"
     },
     {
         "title": "Fried Rice",
@@ -101,7 +101,7 @@
         "page": "Fried_Rice.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Fried_Rice.html",
-        "relative_path": "/recipes/Dinner/Fried_Rice.html"
+        "relative_path": "Fried_Rice"
     },
     {
         "title": "Gnotic Gnoblin Gnocchi",
@@ -109,7 +109,7 @@
         "page": "Gnotic_Gnoblin_Gnocchi.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Gnotic_Gnoblin_Gnocchi.html",
-        "relative_path": "/recipes/Dinner/Gnotic_Gnoblin_Gnocchi.html"
+        "relative_path": "Gnotic_Gnoblin_Gnocchi"
     },
     {
         "title": "Hot n Sour Soup",
@@ -117,7 +117,7 @@
         "page": "Hot_n_Sour_Soup.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Hot_n_Sour_Soup.html",
-        "relative_path": "/recipes/Dinner/Hot_n_Sour_Soup.html"
+        "relative_path": "Hot_n_Sour_Soup"
     },
     {
         "title": "Italian Style Meatballs",
@@ -125,7 +125,7 @@
         "page": "Italian_Style_Meatballs.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Italian_Style_Meatballs.html",
-        "relative_path": "/recipes/Dinner/Italian_Style_Meatballs.html"
+        "relative_path": "Italian_Style_Meatballs"
     },
     {
         "title": "Korean Pancake",
@@ -133,7 +133,7 @@
         "page": "Korean_Pancake.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Korean_Pancake.html",
-        "relative_path": "/recipes/Dinner/Korean_Pancake.html"
+        "relative_path": "Korean_Pancake"
     },
     {
         "title": "Whole Roast Chicken",
@@ -141,7 +141,7 @@
         "page": "Whole_Roast_Chicken.html",
         "directory": "public/recipes/Dinner",
         "path": "public/recipes/Dinner/Whole_Roast_Chicken.html",
-        "relative_path": "/recipes/Dinner/Whole_Roast_Chicken.html"
+        "relative_path": "Whole_Roast_Chicken"
     },
     {
         "title": "Kimchi",
@@ -149,7 +149,7 @@
         "page": "Kimchi.html",
         "directory": "public/recipes/Other",
         "path": "public/recipes/Other/Kimchi.html",
-        "relative_path": "/recipes/Other/Kimchi.html"
+        "relative_path": "Kimchi"
     },
     {
         "title": "Peanut Butter",
@@ -157,7 +157,7 @@
         "page": "Peanut_Butter.html",
         "directory": "public/recipes/Sauces_and_Such",
         "path": "public/recipes/Sauces_and_Such/Peanut_Butter.html",
-        "relative_path": "/recipes/Sauces_and_Such/Peanut_Butter.html"
+        "relative_path": "Peanut_Butter"
     },
     {
         "title": "Vanilla Extract",
@@ -165,7 +165,7 @@
         "page": "Vanilla_Extract.html",
         "directory": "public/recipes/Sauces_and_Such",
         "path": "public/recipes/Sauces_and_Such/Vanilla_Extract.html",
-        "relative_path": "/recipes/Sauces_and_Such/Vanilla_Extract.html"
+        "relative_path": "Vanilla_Extract"
     },
     {
         "title": "Whipped Cream",
@@ -173,7 +173,7 @@
         "page": "Whipped_Cream.html",
         "directory": "public/recipes/Sauces_and_Such",
         "path": "public/recipes/Sauces_and_Such/Whipped_Cream.html",
-        "relative_path": "/recipes/Sauces_and_Such/Whipped_Cream.html"
+        "relative_path": "Whipped_Cream"
     },
     {
         "title": "template",
@@ -181,6 +181,6 @@
         "page": "template.html",
         "directory": "public/recipes",
         "path": "public/recipes/template.html",
-        "relative_path": "/recipes/template.html"
+        "relative_path": "template"
     }
 ]
