@@ -12,7 +12,7 @@ async function loadRecipeTree(recipesDir) {
         console.error('Error reading JSON file:', error);
     }
 
-    toc = document.getElementById("toc");
+    // toc = document.getElementById("toc");
 
     // get the groups/type of recipe
     const groupedData = recipeTree.reduce((groups, item) => {

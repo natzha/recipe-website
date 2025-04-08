@@ -44,8 +44,8 @@ const getMarkdownFiles = (inputDir, outputDir) => {
 
             formattedOutputFilePath = outputFilepath.replace(/\s/g, '_');
             let relative_path;
-            if (formattedOutputFilePath.startsWith("public/")) {
-                relative_path = formattedOutputFilePath.replace("public/", "");
+            if (formattedOutputFilePath.startsWith("public")) {
+                relative_path = formattedOutputFilePath.replace("public", "");
             } 
 
             htmlFilesInfo.push({
