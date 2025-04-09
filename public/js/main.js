@@ -66,6 +66,9 @@ document.body.onclick = function(e){
     for (var tags=0; tags < tagsToIdentify.length; tags++){
         if (tagType == tagsToIdentify[tags]){
             loadHTML(e.target);
+
+            console.log(e.target);
+
             return false; // cancels the link to page
         }
     }

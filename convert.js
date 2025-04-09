@@ -45,7 +45,7 @@ const getMarkdownFiles = (inputDir, outputDir) => {
             formattedOutputFilePath = outputFilepath.replace(/\s/g, '_');
             let relative_path;
             if (formattedOutputFilePath.startsWith("public")) {
-                relative_path = formattedOutputFilePath.replace("public/recipes/", "");
+                relative_path = formattedOutputFilePath.replace("public/", "");
             } 
 
             htmlFilesInfo.push({
@@ -84,7 +84,7 @@ const convertMarkdown2Html = (filepath) => {
 
 const convert = () => {
     const inputDir = "submodules/Recipes";
-    const outputDir = "public/recipes/";
+    const outputDir = "public/";
     let files, htmlFilePaths = getMarkdownFiles(inputDir, outputDir)
 
     // save data into json

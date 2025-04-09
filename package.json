@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "http-server",
+    "dev": "vite public/ public/js/*.js",
     "build": "node convert.js && parcel build public/index.html public/recipes/*.json public/recipes/*/*.html --public-url /recipes/ && mv dist/recipes/* dist/ && rm -rf dist/recipes/"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "marked": "^15.0.7"
   },
   "devDependencies": {
-    "parcel": "^2.14.4"
+    "parcel": "^2.14.4",
+    "vite": "^6.2.5"
   }
 }
