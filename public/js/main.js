@@ -1,4 +1,8 @@
 // this file requires marked and dompurity
+import extConvertMarkdown2Html from "internal_convert.js"
+
+let html = extConvertMarkdown2Html('../submodules/Recipes/template.md')
+
 
 async function loadRecipeTree(recipesDir) {
     let recipeTree;
