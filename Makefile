@@ -1,7 +1,6 @@
-
+.PHONY: deploy
 deploy:
 	rm -rf submodule/Recipes
-	rm -rf public/recipes
 	rm -rf dist/
 	npm install
 	git submodule update --init --recursive
@@ -17,28 +16,15 @@ deploy:
 	git push origin gh-pages
 	git checkout main  # Go back to the main branch
 
-.PHONY: deploy
 
 .PHONY: build
 build:
 	rm -rf submodule/Recipes
-	rm -rf public/recipes
 	npm install
 	git submodule update --init --recursive
 	npm run build
-
-
-test:
-	rm -rf submodule/Recipes
-	rm -rf public/recipes
-	rm -rf dist
-	npm install
-	git submodule update --init --recursive
-	npm run build
-	serve dist
 
 dev:
 	npm install
 	git submodule update --init --recursive
-	node convert.js
 	npm run dev

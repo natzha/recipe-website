@@ -4,4 +4,5 @@ export default defineConfig({
   server: {
     open: true,  // Automatically open the browser
   },
+  base: './',
 });
