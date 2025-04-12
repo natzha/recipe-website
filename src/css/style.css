@@ -45,6 +45,16 @@ body {
     overflow-y: auto; /* Makes each column scrollable independently */
 }
 
+.item {
+    color: blue;
+}
+.item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
 /* Files column (TOC) */
 #files.column {
     width: 300px; /* Fixed width for TOC */
@@ -103,4 +113,5 @@ body {
     #container {
         flex-direction: column; /* Stack the columns vertically */
     }
+
 }
