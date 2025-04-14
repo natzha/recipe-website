@@ -1,6 +1,6 @@
 .PHONY: deploy
 deploy:
-	rm -rf submodule/Recipes
+	rm -rf submodules/Recipes
 	rm -rf dist/
 	npm install
 	git submodule update --init --recursive

@@ -38,22 +38,19 @@ body {
 
 /* General column layout */
 .column {
-    padding: 20px;
-    margin: 20px;
+    padding: 40px;
     vertical-align: top;
-    height: calc(100vh - 40px); /* Full viewport height minus padding/margin */
+    height: calc(100vh); /* Full viewport height minus padding/margin */
     overflow-y: auto; /* Makes each column scrollable independently */
 }
 
 .item {
-    color: blue;
+    color: hsl(253, 100%, 39%);
 }
 .item:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-
-
 
 /* Files column (TOC) */
 #files.column {
@@ -87,7 +84,7 @@ body {
 }
 
 /* On larger screens, display the files column normally */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     #burger-menu {
         display: none; /* No burger menu on large screens */
     }
@@ -101,7 +98,7 @@ body {
 }
 
 /* On smaller screens (mobile devices), hide the files column and show burger menu */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #burger-menu {
         display: block; /* Show burger menu on mobile */
     }
