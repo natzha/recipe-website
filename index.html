@@ -4,17 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <title>Recipes</title>
+
+    <script>
+        // JavaScript: set a --vh variable
+        window.addEventListener('resize', () => {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+        });
+        // Run it on page load too
+        window.dispatchEvent(new Event('resize'));
+    </script>
+
     <link rel="stylesheet" type="text/css" href="src/css/github-markdown-light.css">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
-
     <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <div id="burger-menu">&#9776;</div> <!-- The burger menu icon -->
     <div id="container">
+        <div id="burger-menu">&#9776;</div> <!-- The burger menu icon -->
+
         <div id="files" class="column" style="display: block;">
             <h1><a href="https://github.com/caryguan/Recipes" target="_blank">Cary's Recipes</a></h1>
             <div id="toc"></div>
